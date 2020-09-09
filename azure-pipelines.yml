@@ -28,5 +28,6 @@ steps:
     BlackDuckService: '188-blackduck'
     DetectVersion: 'latest'
     DetectArguments: |
+      -de
       --detect.project.name=pipelines-java
       --detect.project.version.name=develop
