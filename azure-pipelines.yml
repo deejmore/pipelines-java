@@ -20,3 +20,13 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+
+- task: SynopsysDetectTask@2
+  inputs:
+    Products: 'BD'
+    BlackDuckService: '188-blackduck'
+    DetectVersion: 'latest'
+    DetectArguments: |
+      --detect.project.name=pipelines-java
+      --detect.project.version.name=develop
